@@ -1,0 +1,32 @@
+[
+    {
+        "created_on": "July 12, 2018",
+        "comment_content:": "Thank you for the blog post!",
+        "user_id": 1,
+        "blog_id": 1
+    },
+    {
+        "created_on": "July 12, 2018",
+        "comment_content:": "This was great!",
+        "user_id": 2,
+        "blog_id": 2
+    },
+    {
+        "created_on": "July 12, 2018",
+        "comment_content:": "Handlebars all the way",
+        "user_id": 3,
+        "blog_id": 3
+    },
+    {
+        "created_on": "July 12, 2018",
+        "comment_content:": "Wow",
+        "user_id": 4,
+        "blog_id": 4
+    },
+    {
+        "created_on": "July 12, 2018",
+        "comment_content:": "I'm confused too",
+        "user_id": 5,
+        "blog_id": 5
+    }
+]

@@ -1,0 +1,32 @@
+[
+    {
+        "created_on": "January 07, 1999",
+        "blog_title": "Lost in JavaScript",
+        "blog_content": "If you need help learning how to write javascript you are in the right place",
+        "user_id": 1
+    },
+    {
+        "created_on": "April 09, 2013",
+        "blog_title": "ChatGBT",
+        "blog_content": "Don't worry! AI is nothing compared to developers!",
+        "user_id": 2
+    },
+    {
+        "created_on": "June 23, 2015",
+        "blog_title": "HTML or HandleBars",
+        "blog_content": "You thought it was over but it just got simplier and more confusing at the same time.",
+        "user_id": 3
+    },
+    {
+        "created_on": "November 19, 2017",
+        "blog_title": "vscode",
+        "blog_content": "vs code is a simple way to code and have fun",
+        "user_id": 4
+    },
+    {
+        "created_on": "July 12, 2018",
+        "blog_title": "Local Storage & For Loops",
+        "blog_content": "Make it make sense!?",
+        "user_id": 5
+    }
+]

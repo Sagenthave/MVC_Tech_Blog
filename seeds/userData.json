@@ -1,0 +1,27 @@
+[
+    {
+        "username": "Mario",
+        "email": "mario@gmail.com",
+        "password": "password123"
+    },
+    {
+        "username": "Jack_the_Ripper",
+        "email": "IamJacktheRipper@hotmail.com",
+        "password": "password456"
+    },
+    {
+        "username": "conan_doyle",
+        "email": "sherlockHolmes@gmail.com",
+        "password": "password789"
+    },
+    {
+        "username": "Sagenthave",
+        "email": "sagenthave@gmail.com",
+        "password": "password124"
+    },
+    {
+        "username": "Sinthu",
+        "email": "sinthu1999@hotmail.com",
+        "password": "password356"
+    }
+]
