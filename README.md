@@ -5,6 +5,8 @@
 - I WANT a CMS-style blog site
 - SO THAT I can publish articles, blog posts, and my thoughts and opinions
 
+![screenshot](/)
+
 # Acceptance Criteria
 - GIVEN a CMS-style blog site
 - WHEN I visit the site for the first time
@@ -39,3 +41,7 @@
 - THEN I am signed out of the site
 - WHEN I am idle on the site for more than a set time
 - THEN I am able to view posts and comments but I am prompted to log in again before I can add, update, or delete posts
+
+## Deployment 
+- GitHub: 
+- Deployed Link: 
