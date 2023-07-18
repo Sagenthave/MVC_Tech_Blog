@@ -11,7 +11,7 @@ Blog.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        created: {
+        created_on: {
             type: DataTypes.DATE,
             allowNull: false,
         },
@@ -19,7 +19,7 @@ Blog.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        blog_post: {
+        blog_content: {
             type: DataTypes.TEXT,
             allowNull: false,
         },
@@ -30,7 +30,6 @@ Blog.init(
                 key:"id"
             }
         },
-    
     },
     {
         sequelize,
