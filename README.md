@@ -45,6 +45,9 @@
 ## Credits
 - Krishna (Assistant Instructor): seeds, debugging
 
+## Refereances 
+- w3schools (navigation bar)
+
 ## Deployment 
 - GitHub: 
 - Deployed Link: 
