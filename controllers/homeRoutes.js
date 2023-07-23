@@ -18,6 +18,7 @@ router.get('/', async (req, res) => {
     });
 
     const blogs = blogData.map((blog) => blog.get({ plain: true }));
+    console.log(blogs)
 
     res.render('homepage', { 
       blogs, 
@@ -54,23 +55,23 @@ router.get('/blog/:id', async (req, res) => {
   }
 });
 
-router.get('/profile', withAuth, async (req, res) => {
-  try {
-    const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ['password'] },
-      include: [{ model: Blog }],
-    });
+// router.get('/profile', withAuth, async (req, res) => {
+//   try {
+//     const userData = await User.findByPk(req.session.user_id, {
+//       attributes: { exclude: ['password'] },
+//       include: [{ model: Blog }],
+//     });
 
-    const user = userData.get({ plain: true });
+//     const user = userData.get({ plain: true });
 
-    res.render('profile', {
-      ...user,
-      logged_in: true
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+//     res.render('profile', {
+//       ...user,
+//       logged_in: true
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
@@ -80,5 +81,9 @@ router.get('/login', (req, res) => {
 
   res.render('login');
 });
+
+router.get("/logout" , (req,res)=>{
+  res.redirect('/');
+})
 
 module.exports = router;

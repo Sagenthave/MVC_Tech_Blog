@@ -1,3 +1,17 @@
 <section>
     <h1>Hello World</h1>
 </section>
+
+{{#each blogs}}
+        <li>
+            <h3>{{blogs.title}}</h3>
+            <p>By: {{User.username}}</p>
+            <p>{{content}}</p>
+            <p>Comments:</p>
+            <ul>
+              {{#each Comments}}
+                <li>{{comment_text}} - {{User.username}}</li>
+              {{/each}}
+            </ul>
+        </li>
+        {{/each}}
