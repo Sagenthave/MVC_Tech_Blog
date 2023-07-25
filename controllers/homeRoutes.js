@@ -89,7 +89,28 @@ router.get("/home" , (req,res)=>{
   res.redirect('/');
 })
 
-router.get("/dashboard" , (req,res)=>{
-  res.redirect('/');
+router.get("/dashboard" , withAuth, async (req,res)=>{
+  try {
+
+    const user_id = req.session.user_id;
+    const usersData = await Blog.findAll({
+      where: {
+        user_id
+      },
+      include: {
+        model: User
+      }
+    })
+    const allBlogs = usersData.map((blog) => (blog.get({plain: true})));
+    res.render("blogPost", {
+      allBlogs, 
+      logged_in: req.session.logged_in,
+      user_id: req.session.user_id,
+      user_name: req.session.user_name,
+    })
+  } 
+  catch (error) {
+    console.log(error)
+  }
 })
 module.exports = router;

@@ -35,6 +35,6 @@ const signupFun = async (e) => {
 }
 
 document.getElementById('login_btn').addEventListener('click', loginFun);
-document.getElementById('Sign_up').addEventListener('click', signupFun);
+document.getElementById('signUpBtn').addEventListener('click', signupFun);
 
 
