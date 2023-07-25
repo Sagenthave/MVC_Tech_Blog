@@ -89,4 +89,7 @@ router.get("/home" , (req,res)=>{
   res.redirect('/');
 })
 
+router.get("/dashboard" , (req,res)=>{
+  res.redirect('/');
+})
 module.exports = router;
