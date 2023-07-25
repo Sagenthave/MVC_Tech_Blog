@@ -33,13 +33,15 @@
             <li><a href="/dashboard">Dashboard</a></li>
           </ul>
         </li> --}}
+        
         <li><a href="/home">Home</a></li>
         <li><a href="/blogs">Blogs</a></li>
         <li><a href="/dashboard">Dashboard</a></li>
+        
                 <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
+        {{!-- <a href="/profile">profile</a>  --}}
+        <button class="no-button" id="logout"><span class="glyphicon glyphicon-user"></span>logout</button>
         {{else}}
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -48,14 +50,15 @@
       </ul>
         {{/if}}
     </div>
-    <img class="photo" src="https://cdn.mos.cms.futurecdn.net/Ks6KtG9fx9soz6ddidT9iY.jpg" >
+    <img class="photo" src="https://wallpapercave.com/wp/wp2150006.png" >
   </div>
 </nav>
-<div class="feature_post">
+{{!-- <div class="feature_post">
   <h1 id="feature">FEATURED BLOG POSTS</h1>
- <p>Title: {{blog_title}}</p>
+   --}}
+ {{!-- <p>Title: {{blog_title}}</p>
  <p>Content: {{blog_content}}</p>
- <p>Created On: {{created_on}}</p>
+ <p>Created On: {{created_on}}</p> --}}
 </div>
     </header>
       <main class="">

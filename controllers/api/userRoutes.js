@@ -16,6 +16,30 @@ router.post('/', async (req, res) => {
   }
 });
 
+router.get('/', async (req, res) => {
+  try {
+    // Get all projects and JOIN with user data
+    const userData = await User.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+      ],
+    });
+
+    // Serialize data so the template can read it
+    const users = userData.map((project) => users.get({ plain: true }));
+
+    // Pass serialized data and session flag into template
+    res.render('homepage', {
+      logged_in: req.session.logged_in 
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.post('/login', async (req, res) => {
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
@@ -47,6 +71,52 @@ router.post('/login', async (req, res) => {
     res.status(400).json(err);
   }
 });
+
+router.post("/signup",async (req,res)=>{
+  try{
+  const userData = await User.create({
+      username: req.body.username,
+        email: req.body.email,
+        password: req.body.password,
+  })
+  req.session.save(() => {
+    req.session.username = userData.username
+    req.session.user_id = userData.id
+      req.session.loggedIn = true;
+  
+      res.status(200).json(userData);
+    });
+  }catch(err){
+      console.log(err);
+      res.status(500).json(err);
+  }
+  });
+
+// router.post('/signup', async (req, res) => {
+//   try {
+//     console.log("beforecreating   ------------------")
+//     // const userData = await User.create({username: req.body.username, email: req.body.email, password: req.body.password});
+//     const userData = await User.create({
+//     username: req.body.username,
+//     email: req.body.email,
+//     password: req.body.password,
+// })
+
+//     console.log("after creating ---------------")
+// console.log(userdata);
+
+//     req.session.save(() => {
+//       req.session.user_id = userData.id;
+//       req.session.username = userData.username;
+//       req.session.logged_in = true;
+//       console.log("============================")
+//       res.json({ user: userData, message: 'Your account has been successfully created' });
+//     });
+
+//   } catch (err) {
+//     res.status(400).json(err);
+//   }
+// });
 
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {

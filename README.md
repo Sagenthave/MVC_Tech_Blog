@@ -47,7 +47,7 @@
 
 ## Refereances 
 - w3schools (navigation bar)
-- https://cdn.mos.cms.futurecdn.net/Ks6KtG9fx9soz6ddidT9iY.jpg (Main Image)
+- https://wallpapercave.com/wp/wp2150006.png (Main Image)
 
 ## Deployment 
 - GitHub: 

@@ -1,18 +1,22 @@
 * {
-    /* background-color: rgb(23, 23, 23); */
+
 }
 
 .photo {
     width: 100%;
-    height: auto;
+    height: 400px; object-fit: cover;
 }
 
 #feature {
     text-align: center;
-    color: gray;
 }
 
 .feature_post {
     padding: 0%;
     /* margin-bottom: 80rem; */
+}
+
+.feature_post {
+    text-align: center;
+    /* margin: 30px; */
 }

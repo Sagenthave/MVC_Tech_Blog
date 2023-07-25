@@ -1,13 +1,17 @@
+<div class="feature_post">
+  <h1 id="feature">FEATURED BLOG POSTS</h1>
+
 {{#each blogs}}
         <li>
-            <h3>{{blogs.title}}</h3>
-            <p>By: {{User.username}}</p>
-            <p>{{content}}</p>
+            <h3>{{blog_title}}</h3>
+            <p>By: {{user.username}}</p>
+            <p>{{blog_content}}</p>
             <p>Comments:</p>
             <ul>
               {{#each Comments}}
-                <li>{{comment_text}} - {{User.username}}</li>
+                <li>{{comment_content}} - {{User.username}}</li>
               {{/each}}
             </ul>
         </li>
         {{/each}}
+        </div>
