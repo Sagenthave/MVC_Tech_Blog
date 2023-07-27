@@ -16,4 +16,4 @@ const commentFun = async (e) => {
     }
 }
 
-document.getElementById('post_btn').addEventListener('click', commentFun);
+document.getElementById('comment_btn').addEventListener('click', commentFun);

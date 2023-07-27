@@ -31,7 +31,7 @@ router.get('/', async (req, res) => {
 
 router.get('/blog/:id', async (req, res) => {
   try {
-    const blogtData = await Blog.findByPk(req.params.id, {
+    const blogData = await Blog.findByPk(req.params.id, {
         include: [
             {
                 model: User,
@@ -45,9 +45,19 @@ router.get('/blog/:id', async (req, res) => {
     });
 
     const blog = blogData.get({ plain: true });
+    const comments = await Comment.findAll({
+      where: {
+        blog_id: req.params.id,
 
-    res.render('blog', {
-      ...blog,
+      }, include: {
+        model: User
+      }
+    })
+    const commentData = comments.map((comment) => comment.get({plain: true}));
+
+    res.render('homepage', {
+    blog,
+    commentData,user_name: req.session.user_name,
       logged_in: req.session.logged_in
     });
   } catch (err) {

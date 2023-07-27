@@ -23,6 +23,7 @@ document.getElementById('submit_btn').addEventListener('click', postFun);
 // UPDATE A BLOG POST
 const editFun = async(e) => {
     e.preventDefault();
+    // WHERE WOULD THESE ELEMENTS GO?
     const newtitle = document.getElementById('newTitle').value;
     const newDescription = document.getElementById('newDescription').value;
 }

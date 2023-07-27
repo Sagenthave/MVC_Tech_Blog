@@ -1,17 +1,35 @@
-<div class="feature_post">
-  <h1 id="feature">FEATURED BLOG POSTS</h1>
+{{#if blog}}
+  <h2>Post: {{blog.blog_title}}</h2>
+  <h4>Post By: {{blog.user.username}}</h4>
+  <p>{{blog.blog_content}}</p>
+  {{#if commentData}}
+    {{#each commentData}}
+      <p>Comments by: {{user.username}}</p>
+      <p>{{comment_content}}</p>
+    {{/each}}
+  {{/if}}
+{{else}}
+  <div class="feature_post">
+    <h1 id="feature">FEATURED BLOG POSTS</h1>
+    {{#each blogs}}
+      <li class="existing_post">
+        <h3 class="blog_title"><a href="/blog/{{id}}">{{blog_title}}</a></h3>
+        <p>By: {{user.username}}</p>
+        <p>{{blog_content}}</p>
+      </li>
+    {{/each}}
+  </div>
+{{/if}}
 
-{{#each blogs}}
-        <li class="existing_post">
-            <h3 class="blog_title">{{blog_title}}</h3>
-            <p>By: {{user.username}}</p>
-            <p>{{blog_content}}</p>
-            {{!-- <p>Comments:</p>
-            <ul>
-              {{#each Comments}}
-                <li>{{comment_content}} - {{User.username}}</li>
-              {{/each}}
-            </ul> --}}
-        </li>
-        {{/each}}
-        </div>
+{{!-- POST COMMENT --}}
+<div class="container" id="comment">
+  <form>
+    <div class="form-group">
+      <label for="comment">Comment:</label>
+      <textarea class="form-control" rows="5" id="comment"></textarea>
+    <button id="comment_btn">Post</button>
+
+    </div>
+  </form>
+</div>
+</div>
