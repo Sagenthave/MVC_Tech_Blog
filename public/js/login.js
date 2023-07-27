@@ -14,13 +14,20 @@ const loginFun = async (e) => {
         console.error(data.message)
     }
 }
-
+//copy this and change the 
 const signupFun = async (e) => {
     e.preventDefault();
     const username = document.getElementById('username').value;
     const email = document.getElementById('new_mail').value;
     const password = document.getElementById('new_pass').value;
- 
+
+    if(password.length < 8){
+        alert("Please enter atleast 8 character password");
+        return;
+    }
+
+    
+ //fetch router
     const response = await fetch("/api/user/signup", {
         method: 'POST', headers: {'Content-Type': 'application/json'}, 
         body: JSON.stringify({username, email, password})
