@@ -5,7 +5,7 @@
 - I WANT a CMS-style blog site
 - SO THAT I can publish articles, blog posts, and my thoughts and opinions
 
-![screenshot](/)
+![screenshot](/public/Images/Screenshot%202023-07-27%20at%202.11.48%20PM.png)
 
 # Acceptance Criteria
 - GIVEN a CMS-style blog site
@@ -49,6 +49,11 @@
 - w3schools (navigation bar)
 - https://wallpapercave.com/wp/wp2150006.png (Main Image)
 
+## Installation
+- npm install
+- node seeds/seeds.js
+- node sever.js
+
 ## Deployment 
-- GitHub: 
+- GitHub: https://github.com/Sagenthave/MVC_Tech_Blog
 - Deployed Link: 
