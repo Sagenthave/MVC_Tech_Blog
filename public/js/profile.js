@@ -3,9 +3,9 @@ const postFun = async (e) => {
     e.preventDefault();
     const title = document.getElementById('title').value;
     const description = document.getElementById('description').value;
-    
+    alert(title);
  //fetch router
-    const response = await fetch("/api/user/blog/", {
+    const response = await fetch("/api/blog/", {
         method: 'POST', headers: {'Content-Type': 'application/json'}, 
         body: JSON.stringify({title, description})
     });

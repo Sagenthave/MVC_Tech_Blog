@@ -28,10 +28,14 @@
   <form>
     <div class="form-group">
       <label for="comment">Comment:</label>
-      <textarea class="form-control" rows="5" id="comment"></textarea>
+      <textarea class="form-control" rows="5" id="commentbox"></textarea>
+      <input type="hidden" value={{blog.id}} id="blogId"/>
     <button id="comment_btn">Post</button>
+    
 
     </div>
   </form>
 </div>
 </div>
+<script src="/js/comment.js"></script>
+

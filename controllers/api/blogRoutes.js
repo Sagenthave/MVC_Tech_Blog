@@ -5,14 +5,26 @@ const withAuth = require('../../utils/auth');
 // CREATE A NEW BLOG POST
 router.post('/', withAuth, async (req, res) => {
     try {
-      const newBlog = await Blog.create({
-        ...req.body,
-        user_id: req.session.user_id,
-      });
+      console.log("-----------------------------------"+req.session.user_id);
+    //   const newBlog = await Blog.create({
+    //     title: req.body.title,
+    //     description: req.body.description,
+    //     user_id: req.session.user_id,
+    //   });
   
-      res.status(200).json(newBlog);
+    //   res.status(200).json(newBlog);
+    // } catch (err) {
+    //   res.status(400).json(err);
+    // }
+      const newPost = await Blog.create({
+        title: req.body.title,
+        description: req.body.description,
+        user_id: req.session.user_id,
+  
+      })
+      res.status(200).json(newPost)
     } catch (err) {
-      res.status(400).json(err);
+      console.log(err)
     }
 });
 
@@ -50,6 +62,10 @@ router.delete('/:id', withAuth, async (req, res) => {
       res.status(500).json(err);
     }
   });
+
+
+  //let's add the comments to particular blog
+
 
 
 
