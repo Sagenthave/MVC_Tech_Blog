@@ -1,11 +1,13 @@
 {{#if blog}}
-  <h2>Post: {{blog.blog_title}}</h2>
-  <h4>Post By: {{blog.user.username}}</h4>
+<section class="existComments">
+  <h2>{{blog.blog_title}}</h2>
+  {{!-- <h4>Post By: {{blog.user.username}}</h4> --}}
   <p>{{blog.blog_content}}</p>
   {{#if commentData}}
     {{#each commentData}}
-      <p>Comments by: {{user.username}}</p>
+      <h3>Comments by: {{user.username}}</h3>
       <p>{{comment_content}}</p>
+      </section>
     {{/each}}
   {{/if}}
 {{else}}
