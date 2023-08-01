@@ -5,9 +5,10 @@
 <h1 class="existingPosts">Existing Posts</h1>
 {{#each allBlogs}}
 <div class="blogCont">
-<h2>Title: {{blog_title}}</h2>
-<p>Description: {{blog_content}}</p>
-<button id="update_btn">Update</button>
+<h2>Title: <span id="update_blogTitle">{{blog_title}}</span></h2>
+<p>Description: <span id="update_blogContent">{{blog_content}}</span></p>
+<button id="update_btn" >Update</button>
+
 <input type="hidden" id="blog_id" value="{{id}}" />
 <button id="delete_btn" >Delete</button>
 </div>
@@ -24,9 +25,11 @@
   <form>
     <input type="text" placeholder="Title" id="title">
         <div class="form-group">
-      <textarea class="form-control" rows="5" id="description" placeholder="Description"></textarea>
+          <input type="hidden" id="blogId_update"/>
+            <textarea class="form-control" rows="5" id="description" placeholder="Description"></textarea>
     </div>
     <button id="submit_btn">Post</button>
+    <button id="update_all_btn">Update</button>
   </form>
 </div>
 </section>

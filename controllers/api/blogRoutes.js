@@ -18,7 +18,7 @@ router.post('/', withAuth, async (req, res) => {
 });
 
 // UPDATE EXISTING BLOG POST
-router.put('/:id', withAuth, async (req, res) => {
+router.put('/:blog_id', withAuth, async (req, res) => {
     try {
       const blogData = await Blog.update(req.body, {
         where: {
@@ -26,6 +26,10 @@ router.put('/:id', withAuth, async (req, res) => {
             user_id: req.session.user_id,
           },
       });
+      const updatedBlogData = await blogData.update({
+      blog_title: req.body.newtitle,
+      blog_content: req.body.newDescription,
+    });
       res.status(200).json(blogData);
     } catch (error) {
       res.status(400).json(error);
