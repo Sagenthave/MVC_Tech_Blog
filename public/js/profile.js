@@ -3,7 +3,6 @@ const postFun = async (e) => {
     e.preventDefault();
     const title = document.getElementById('title').value;
     const description = document.getElementById('description').value;
-    alert(title);
  //fetch router
     const response = await fetch("/api/blog/", {
         method: 'POST', headers: {'Content-Type': 'application/json'}, 
@@ -11,8 +10,8 @@ const postFun = async (e) => {
     });
     const data = await response.json();
     if(response.ok) {
-        console.log('success');
-        document.location.replace('/');
+      alert('Your post has been created!');
+      document.location.reload();
     } else {
         console.error("error")
     }
@@ -34,17 +33,17 @@ document.getElementById('update_btn').addEventListener('click', editFun);
 // DELETE A BLOG POST
 const deleteFun = async(e) => {
     e.preventDefault();
-    if (e.target.hasAttribute('delete_btn')) {
-        const id = e.target.getAttribute('delete_btn');
-        const response = await fetch(`/api/user/${id}`, {
+    const id = document.getElementById('blog_id').value;
+        const response = await fetch(`/api/blog/${id}`, {
           method: 'DELETE',
         });
     
         if (response.ok) {
-          document.location.replace('/');
+          alert("Post deleted succesffuly!!");
+          document.location.reload();
         } else {
           console.log('Failed to delete post');
         }
-      }
+      
 }
 document.getElementById('delete_btn').addEventListener('click', deleteFun);

@@ -7,9 +7,19 @@
     {{#each commentData}}
       <h3>Comments by: {{user.username}}</h3>
       <p>{{comment_content}}</p>
-      </section>
     {{/each}}
   {{/if}}
+{{!-- POST COMMENT --}}
+<div class="container" id="comment">
+  <form>
+    <div class="form-group">
+      <label for="comment">Comment:</label>
+      <textarea class="form-control" rows="5" id="commentbox"></textarea>
+      <input type="hidden" value={{blog.id}} id="blogId"/>
+    <button id="comment_btn">Post</button>
+    </div>
+  </form>
+</div>
 {{else}}
   <div class="feature_post">
     <h1 id="feature">FEATURED BLOG POSTS</h1>
@@ -22,20 +32,5 @@
     {{/each}}
   </div>
 {{/if}}
-
-{{!-- POST COMMENT --}}
-<div class="container" id="comment">
-  <form>
-    <div class="form-group">
-      <label for="comment">Comment:</label>
-      <textarea class="form-control" rows="5" id="commentbox"></textarea>
-      <input type="hidden" value={{blog.id}} id="blogId"/>
-    <button id="comment_btn">Post</button>
-    
-
-    </div>
-  </form>
-</div>
-</div>
+</section>
 <script src="/js/comment.js"></script>
-

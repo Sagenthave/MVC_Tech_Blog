@@ -8,7 +8,8 @@
 <h2>Title: {{blog_title}}</h2>
 <p>Description: {{blog_content}}</p>
 <button id="update_btn">Update</button>
-<button id="delete_btn">Delete</button>
+<input type="hidden" id="blog_id" value="{{id}}" />
+<button id="delete_btn" >Delete</button>
 </div>
 {{/each}}
 {{else}}

@@ -9,8 +9,8 @@ const commentFun = async (e) => {
     });
     const data = await response.json();
     if(response.ok) {
-        console.log('success');
-        document.location.replace('/');
+        alert('Your comment has been created!');
+        document.location.reload();
     } else {
         console.error("error")
     }
