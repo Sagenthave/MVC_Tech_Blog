@@ -55,7 +55,7 @@ router.get('/blog/:id', async (req, res) => {
     })
     const commentData = comments.map((comment) => comment.get({plain: true}));
 
-    res.render('homepage', {
+    res.render('homePage', {
     blog,
     commentData,user_name: req.session.user_name,
       logged_in: req.session.logged_in
