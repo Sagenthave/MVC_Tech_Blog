@@ -35,7 +35,7 @@ const signupFun = async (e) => {
     const data = await response.json();
     if(response.ok) {
         console.log('success');
-        document.location.replace('/');
+        document.location.replace('/profile');
     } else {
         console.error("error")
     }

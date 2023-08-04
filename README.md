@@ -56,4 +56,4 @@
 
 ## Deployment 
 - GitHub: https://github.com/Sagenthave/MVC_Tech_Blog
-- Deployed Link: 
+- Deployed Link: https://sagenthave-techblog-2ccca85c236a.herokuapp.com/
