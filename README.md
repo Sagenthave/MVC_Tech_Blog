@@ -57,3 +57,4 @@
 ## Deployment 
 - GitHub: https://github.com/Sagenthave/MVC_Tech_Blog
 - Deployed Link: https://sagenthave-techblog-2ccca85c236a.herokuapp.com/
+- Video Demo: https://drive.google.com/file/d/1wFRAS5qtVlPyFGyhSXj5dU1DawOPqYYW/view 
